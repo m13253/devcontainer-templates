@@ -1,0 +1,17 @@
+{
+    "name": "Vibe",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/node": {
+            "version": "latest",
+            "npmVersion": "latest"
+        }
+    },
+    "runArgs": [
+        // Fixes VS Code terminal sandbox
+        // https://github.com/containers/bubblewrap/issues/505#issuecomment-5708882071
+        "--security-opt=unmask=/proc/*"
+    ]
+}
