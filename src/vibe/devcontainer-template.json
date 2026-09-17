@@ -1,0 +1,7 @@
+{
+    "id": "vibe",
+    "version": "0.0.1",
+    "name": "Vibe",
+    "description": "@m13253’s vibe coding sandbox based on Debian",
+    "platforms": ["Any"]
+}
