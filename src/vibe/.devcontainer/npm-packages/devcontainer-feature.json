@@ -1,0 +1,8 @@
+{
+    "id": "npm-packages",
+    "version": "0.0.1",
+    "name": "Custom npm packages for @m13253’s vibe coding sandbox",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/node"
+    ]
+}
