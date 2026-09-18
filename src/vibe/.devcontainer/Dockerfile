@@ -10,12 +10,13 @@ RUN <<EOF
     # cargo: Rust
     # command-not-found: so LLMs will notice missing commands can be installed
     # ed: in case the coding harness’s file editing tools fails
+    # file: recognize file types
     # golang-go: Go
     # mupdf-tools, poppler-utils: PDF
     # python-is-python3 python3-pip: Python
     # ripgrep: LLM’s preferred grep
     # vim-nox: replace Vi with the full Vim
-    apt-get install -y build-essential cargo command-not-found ed golang-go mupdf-tools poppler-utils python-is-python3 python3-pip ripgrep vim-nox
+    apt-get install -y build-essential cargo command-not-found file ed golang-go mupdf-tools poppler-utils python-is-python3 python3-pip ripgrep vim-nox
 
     apt-get purge -y vim-tiny
     apt-file update
