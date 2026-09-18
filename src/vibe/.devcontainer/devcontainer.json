@@ -6,8 +6,10 @@
     "features": {
         "ghcr.io/devcontainers/features/node": {
             "version": "latest",
-            "npmVersion": "latest"
-        }
+            "npmVersion": "latest",
+            "pnpmVersion": "none"
+        },
+        "./npm-packages": {}
     },
     "runArgs": [
         // Fixes VS Code terminal sandbox
