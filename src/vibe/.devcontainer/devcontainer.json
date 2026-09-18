@@ -11,9 +11,9 @@
         },
         "./npm-packages": {}
     },
-    "runArgs": [
+    "securityOpt": [
         // Fixes VS Code terminal sandbox
         // https://github.com/containers/bubblewrap/issues/505#issuecomment-5708882071
-        "--security-opt=unmask=/proc/*"
+        "unmask=/proc/*"
     ]
 }
