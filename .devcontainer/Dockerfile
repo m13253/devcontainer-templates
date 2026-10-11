@@ -26,7 +26,4 @@ RUN <<EOF
     apt-get autoremove -y --purge
     apt-get clean -y
     rm -rf /var/lib/apt/lists/*
-
-    # deno: JavaScript / TypeScript
-    curl -fsSL https://deno.land/install.sh | CI=1 DENO_INSTALL=/usr/local sh
 EOF
