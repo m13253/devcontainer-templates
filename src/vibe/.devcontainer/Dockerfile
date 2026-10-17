@@ -17,9 +17,10 @@ RUN <<EOF
     # golang-go: Go
     # mupdf-tools, poppler-utils: PDF
     # python-is-python3 python3-pip: Python
+    # python3-ipykernel: IPython Notebook
     # ripgrep: LLM’s preferred grep
     # vim-nox: replace Vi with the full Vim
-    apt-get install -y 7zip 7zip-standalone bat build-essential cargo command-not-found file ed golang-go mupdf-tools poppler-utils python-is-python3 python3-pip ripgrep vim-nox
+    apt-get install -y 7zip 7zip-standalone bat build-essential cargo command-not-found file ed golang-go mupdf-tools poppler-utils python-is-python3 python3-ipykernel python3-pip ripgrep vim-nox
 
     apt-get purge -y vim-tiny
     apt-file update
