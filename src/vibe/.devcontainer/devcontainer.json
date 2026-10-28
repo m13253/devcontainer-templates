@@ -3,14 +3,6 @@
     "build": {
         "dockerfile": "Dockerfile"
     },
-    "features": {
-        "ghcr.io/devcontainers/features/node": {
-            "version": "latest",
-            "npmVersion": "latest",
-            "pnpmVersion": "none"
-        },
-        "./npm-packages": {}
-    },
     "securityOpt": [
         // Fixes VS Code terminal sandbox
         // https://github.com/containers/bubblewrap/issues/505#issuecomment-5708882071
