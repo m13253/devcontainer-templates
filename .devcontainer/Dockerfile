@@ -33,7 +33,7 @@ RUN <<EOF
     # uv
     su vscode -c 'curl -LsSf https://astral.sh/uv/install.sh | sh'
     # Paseo, Pi
-    su vscode -c 'set -e; \. "$HOME/.nvm/nvm.sh"; export PATH="$HOME/.local/share/pnpm/bin:$PATH"; pnpm add -g @getpaseo/cli @earendil-works/pi-coding-agent'
+    su vscode -c 'set -e; \. "$HOME/.nvm/nvm.sh"; npm install -g npm; npm install -g @getpaseo/cli @earendil-works/pi-coding-agent'
     # omp
     su vscode -c 'curl -fsSL https://omp.sh/install | sh'
 EOF
