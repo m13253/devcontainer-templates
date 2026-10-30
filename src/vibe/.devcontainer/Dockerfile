@@ -28,12 +28,12 @@ RUN <<EOF
     apt-get clean -y
     rm -rf /var/lib/apt/lists/*
 
-    # Node.js, pnpm
-    su vscode -c 'set -e; curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash; \. "$HOME/.nvm/nvm.sh"; nvm install --lts; curl -fsSL https://get.pnpm.io | sh -'
+    # Node.js, npm, pnpm
+    su vscode -c 'set -e; curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash; \. "$HOME/.nvm/nvm.sh"; nvm install --lts; npm install -g npm; curl -fsSL https://get.pnpm.io | sh -'
     # uv
     su vscode -c 'curl -LsSf https://astral.sh/uv/install.sh | sh'
     # Paseo, Pi
-    su vscode -c 'set -e; \. "$HOME/.nvm/nvm.sh"; npm install -g npm; npm install -g @getpaseo/cli @earendil-works/pi-coding-agent'
+    su vscode -c 'set -e; \. "$HOME/.nvm/nvm.sh"; npm install -g @getpaseo/cli @earendil-works/pi-coding-agent'
     # omp
     su vscode -c 'curl -fsSL https://omp.sh/install | sh'
 EOF
