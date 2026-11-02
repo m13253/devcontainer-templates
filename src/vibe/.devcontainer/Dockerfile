@@ -6,13 +6,14 @@ RUN <<EOF
     apt-get update -y
     apt-get dist-upgrade -y
 
-    # 7zip: 7z, 7za, 7zr
     # 7zip-standalone: 7zz
+    # 7zip: 7z, 7za, 7zr
     # bat: batcat
     # build-essential: C / C++
     # cargo: Rust
     # command-not-found: so LLMs will notice missing commands can be installed
     # ed: in case the coding harness’s file editing tools fails
+    # fd-find: Pi depends on fd
     # file: recognize file types
     # golang-go: Go
     # mupdf-tools, poppler-utils: PDF
@@ -20,7 +21,7 @@ RUN <<EOF
     # python3-ipykernel: IPython Notebook
     # ripgrep: LLM’s preferred grep
     # vim-nox: replace Vi with the full Vim
-    apt-get install -y 7zip 7zip-standalone bat build-essential cargo command-not-found file ed golang-go mupdf-tools poppler-utils python-is-python3 python3-ipykernel python3-pip ripgrep vim-nox
+    apt-get install -y 7zip 7zip-standalone bat build-essential cargo command-not-found fd-find file ed golang-go mupdf-tools poppler-utils python-is-python3 python3-ipykernel python3-pip ripgrep vim-nox
 
     apt-get purge -y vim-tiny
     apt-file update
