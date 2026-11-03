@@ -34,7 +34,7 @@ RUN <<EOF
     # omp
     su vscode -c 'curl -fsSL https://omp.sh/install | sh'
     # Pi
-    su vscode -c 'curl -fsSL https://pi.dev/install.sh | sh'
+    su vscode -c 'set -e; \. "$HOME/.nvm/nvm.sh"; curl -fsSL https://pi.dev/install.sh | sh'
     # Paseo
     su vscode -c 'set -e; \. "$HOME/.nvm/nvm.sh"; npm install -g @getpaseo/cli'
     # uv
