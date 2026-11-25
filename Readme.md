@@ -18,8 +18,10 @@ So, I choose the dirty way of copying and pasting.
 
 1. Install [DevPod](https://devpod.sh/).
 2. Create a new provider. It could be a Docker / rootless-Podman Engine running either on local system or a remote SSH server.
-3. Create a new workspace. Set the Git Repo source to `https://github.com/m13253/devcontainer-templates.git@vibe`.
-4. Scroll down and choose a unique workspace name, in case you want to create multiple Dev Containers.
+3. Create a new workspace. Set the Git Repo source to `https://github.com/m13253/devcontainer-templates.git@vibe`. Choose a unique workspace name.
+   ```bash
+   $ devpod up --id WORKSPACE_NAME --ide none https://github.com/m13253/devcontainer-templates.git@vibe
+   ```
 5. SSH into your sandbox using `ssh WORKSPACE_NAME.devpod`.
 
-Note: If you use rootless Podman, and can’t delete your workspace after you’ve done using it, try `podman unshare rm -r ~/.devpod/agent/contexts/default/workspaces/WORKSPACE_NAME`.
+Note: If you use rootless Podman, and can’t delete your workspace after you’ve done using it, try `podman unshare rm -rf ~/.devpod/agent/contexts/default/workspaces/WORKSPACE_NAME`.
